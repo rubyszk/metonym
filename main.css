@@ -22,13 +22,14 @@ form {
     color: black;
     opacity: 1
 }
+
 .word {
     font-family: 'DM Serif Display', serif;
     outline: none;
     border-style: none;
     padding-top: 100px;
     margin: 10px;
-    font-size: 26px;
+    font-size: 36px;
 }
 
 .submit {
