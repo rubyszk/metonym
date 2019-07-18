@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Source+Sans+Pro&display=swap');
+
+a {
+    font-family: 'DM Serif Display', serif;
+    list-style: none;
+    display: block;
+    word-spacing: 5px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+form {
+    text-align: left;
+    margin: 70px 100px 0px 100px;
+    /* margin-top: 10em; */
+}
+
+
+::placeholder {
+    color: black;
+    opacity: 1
+}
+.word {
+    font-family: 'DM Serif Display', serif;
+    outline: none;
+    border-style: none;
+    padding-top: 100px;
+    margin: 10px;
+    font-size: 26px;
+}
+
+.submit {
+    display: none;
+} 
+
+.container {
+    margin-left: 107px;
+    margin-bottom: 150px;
+}
