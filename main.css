@@ -9,6 +9,7 @@ a {
 
 a:hover {
     cursor: pointer;
+    color: #ff7d93;
 }
 
 form {
@@ -16,7 +17,6 @@ form {
     margin: 70px 100px 0px 100px;
     /* margin-top: 10em; */
 }
-
 
 ::placeholder {
     color: black;
@@ -29,14 +29,65 @@ form {
     border-style: none;
     padding-top: 100px;
     margin: 10px;
-    font-size: 36px;
+    font-size: 42px;
 }
+
+.clicked {
+   font-size: 18px;
+   margin-left: 10px;
+   margin-top: 7px;
+   margin-bottom: 15px;
+   display: none;
+   color:  #ff7d93; 
+
+}
+
+.heart {
+   font-size: 18px;
+   margin-left: 10px;
+   margin-top: 7px;
+   margin-bottom: 15px;
+   display: none;
+}
+
+.heart:hover {
+    color: #ff7d93;
+    cursor: pointer;
+}
+
 
 .submit {
     display: none;
 } 
 
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    display: inline;
+    font-size: 16px;
+    margin-left: 10px;
+} 
+
+ h5 {
+    display: inline;
+    font-size: 14px;
+} 
+
 .container {
-    margin-left: 107px;
+    margin-left: 110px;
     margin-bottom: 150px;
+}
+
+img {
+    height: 25px;
+    margin-left: 600px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+img:hover {
+    cursor: pointer;
 }
