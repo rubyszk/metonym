@@ -71,16 +71,14 @@ $(() => {
     const saveWord = () => {
         const input = $('.word').val();
         localStorage.setItem('word', input);
-        console.log(localStorage);
+        $('#saved').append(localStorage);
     }
 
     const deleteWord = () => {
         const input = $('.word').val();
         localStorage.removeItem('word', input);
-        console.log(localStorage);
+        $('#saved').append(localStorage);
     }
-
-        // let counter = 0;
 
         $('.heart').on('click', (event) => {
             event.preventDefault();
@@ -95,3 +93,52 @@ $(() => {
         })
 
 })
+
+ /////////////// SIDEBAR TOGGLE ////////////////
+
+//  const open = () => {
+//      $('img').on('click', (event) => {
+     
+//      })
+     
+//  }
+
+//  const close = () => {
+//      $('.sidebar').css('width', '0');
+//      $('.container').css('margin-left', '0');
+//  }
+
+/////////////////////////
+
+$(document).ready( function() {
+    
+    let sidebarStatus = 'hidden';
+    
+    $('img').on('click', (event) => {
+        
+        if (sidebarStatus == 'hidden') {
+            $('img').toggleClass('active');
+            $("#sidebar").toggleClass('show-sidebar');
+            sidebarStatus = 'visible';
+
+        } else if (sidebarStatus == 'visible') {
+            $("img").toggleClass('active');
+            $("#sidebar").toggleClass('hide-sidebar');
+            sidebarStatus = 'hidden';
+        }
+
+    });
+
+// $('#saved').on('click', event => {
+
+// })
+
+
+
+    // $('#about').on('click', (event) => {
+    //     const $modal = $('<div>').text('METONYM')
+    //     $modal.addClass('modal')
+    //     $('body').append($modal)
+    // })
+
+});
