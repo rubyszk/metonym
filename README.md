@@ -17,4 +17,3 @@ Utilizing local storage, METONYM enables users to save and retrieve words that i
 
 ##Improvements
 - Update sidebar storage
-- Update 'My Words' on/off click

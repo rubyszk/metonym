@@ -148,6 +148,10 @@ $('#saved').on('click', (event) => {
     wordcounter++
     $('#about').css('display', 'none');
     $('#saved').css('margin-top', '10px');
+    if (wordcounter % 2 == 0) {
+        $('#about').css('display', 'block');
+        
+    }
 })
 
 
