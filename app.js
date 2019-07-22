@@ -71,13 +71,15 @@ $(() => {
     const saveWord = () => {
         const input = $('.word').val();
         localStorage.setItem('word', input);
-        $('#saved').append(localStorage);
+        $('#mywords').append(localStorage);
+        console.log(localStorage)
     }
 
     const deleteWord = () => {
         const input = $('.word').val();
         localStorage.removeItem('word', input);
-        $('#saved').append(localStorage);
+        $('#mywords').append(localStorage);
+        console.log(localStorage)
     }
 
         $('.heart').on('click', (event) => {
@@ -94,25 +96,12 @@ $(() => {
 
 })
 
- /////////////// SIDEBAR TOGGLE ////////////////
 
-//  const open = () => {
-//      $('img').on('click', (event) => {
-     
-//      })
-     
-//  }
-
-//  const close = () => {
-//      $('.sidebar').css('width', '0');
-//      $('.container').css('margin-left', '0');
-//  }
-
-/////////////////////////
+//////////////// SIDEBAR /////////////////
 
 $(document).ready( function() {
     
-    let sidebarStatus = 'hidden';
+let sidebarStatus = 'hidden';
     
     $('img').on('click', (event) => {
         
@@ -129,16 +118,37 @@ $(document).ready( function() {
 
     });
 
-// $('#saved').on('click', event => {
-
-// })
-
+// code referenced
+// https://css-tricks.com/forums/topic/sidebar-toggle/
 
 
-    // $('#about').on('click', (event) => {
-    //     const $modal = $('<div>').text('METONYM')
-    //     $modal.addClass('modal')
-    //     $('body').append($modal)
-    // })
+//////////////// MODAL /////////////////
+
+const $modal = $('#myModal')
+
+    $('#about').on('click', (event) => {
+    $modal.css('display', 'block')
+})
+
+    $('span').on('click', (event) => {
+    $modal.css('display', 'none')
+})
+
+    $('window').on('click', (event) => {
+        if (event.currentTarget == $modal) {
+            $modal.css('display', 'none')
+    }
+})
+
+//////////////// SAVED WORDS /////////////////
+
+let wordcounter = 0;
+
+$('#saved').on('click', (event) => {
+    wordcounter++
+    $('#about').css('display', 'none');
+    $('#saved').css('margin-top', '10px');
+})
+
 
 });

@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap');
+
+main {
+    width: 100%;
+}
 
 a {
     font-family: 'DM Serif Display', serif;
@@ -15,7 +20,6 @@ a:hover {
 form {
     text-align: left;
     margin: 70px 100px 0px 100px;
-    /* margin-top: 10em; */
 }
 
 ::placeholder {
@@ -92,15 +96,8 @@ img:hover {
     cursor: pointer;
 }
 
-/*//////////////////////////////////*/
 
-/* .sidebar {
-    width: 200px;
-    position: absolute;
-    background: lightgray;
-
-} */
-
+/*////////////////SIDEBAR//////////////////*/
 
 #sidebar {
     float: right;
@@ -155,16 +152,82 @@ img:hover {
 }
 
 
-/* #sidebar.original-sidebar {
-    position:fixed;
-    width: 175px;
-    height: 800px;
-    background-color: lightgray;
-    color:#FAFAFA;
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 0% 100%);
-    transition: all 1s;
-} */
 
-/* .modal {
-    
-} */
+/*////////////////SIDEBAR//////////////////*/
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  h1 {
+      text-align: center;
+  }
+
+  .copyright {
+      font-size: 12px;
+      margin-top: 50px;
+  }
+ 
+  .modal-content {
+    text-align: center;
+    background-color: #FAFAFA;
+    margin: 15% auto; 
+    padding: 20px;
+    width: 80%; 
+  }
+
+  p {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .close {
+    color: #aaa;
+    margin-top: -5px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ff7d93;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .meto {
+      line-height: 1.5;
+  }
+
+
+  /*////////////////MEDIAQUERY//////////////////*/
+
+  @media screen and (max-width: 992px) {
+    .main {
+      width: 50%;
+    }
+
+    img {
+        margin-top: 400px;
+        margin-left: 225px;
+    }
+
+    #sidebar {
+        bottom: 110px;
+        height: 130px;
+        position: fixed;
+        text-align: center;
+        width: 90%;
+        
+    }
+  }
